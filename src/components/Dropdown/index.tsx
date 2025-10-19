@@ -49,6 +49,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
       itemTestIDField,
       onChange,
       style = {},
+      dropdownStyle,
       containerStyle,
       placeholderStyle,
       selectedTextStyle,
@@ -449,7 +450,7 @@ const DropdownComponent = React.forwardRef<IDropdownRef, DropdownProps<any>>(
           accessibilityLabel={accessibilityLabel}
           onPress={showOrClose}
         >
-          <View style={styles.dropdown}>
+          <View style={[styles.dropdown, dropdownStyle]}>
             {renderLeftIcon?.(visible)}
             <Text
               style={[
